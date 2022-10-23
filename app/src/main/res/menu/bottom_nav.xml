@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="HJEM" android:id="@+id/hjem" android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="KONTAKTER" android:id="@+id/kontakter" android:icon="@drawable/ic_baseline_contacts_24"/>
+    <item android:title="AVTALER" android:id="@+id/avtaler" android:icon="@drawable/ic_baseline_playlist_add_check_24"/>
+</menu>
