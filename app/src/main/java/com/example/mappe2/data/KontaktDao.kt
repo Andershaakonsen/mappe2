@@ -14,6 +14,15 @@ interface KontaktDao {
     @Update
     fun updateKontakt(kontakt: Kontakt)
 
+    @Delete
+    fun deleteKontakt(kontakt: Kontakt)
+
+    /*
+    @Query("DELETE FROM kontakt_table")
+    suspend fun deleteAllKontakt()
+
+     */
+
     @Query("SELECT * FROM kontakt_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Kontakt>>
 

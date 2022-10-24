@@ -1,11 +1,10 @@
 package com.example.mappe2.fragments.update
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -46,6 +45,10 @@ class KontaktUpdateFragment : Fragment() {
             updateItem()
         }
 
+        //Add menu
+        setHasOptionsMenu(true)
+
+
         return view
     }
 
@@ -69,4 +72,30 @@ class KontaktUpdateFragment : Fragment() {
         return !(TextUtils.isEmpty(navn) && TextUtils.isEmpty(telefon))
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+       inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.itemId == R.id.menu_delete){
+            deleteUser()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun deleteUser() {
+       val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Yes"){ _, _ ->
+            mKontakViewModel.deleteKontakt(args.currentKontakt)
+            Toast.makeText(
+                requireContext(),
+                "Kontakt fjernet: ${args.currentKontakt.navn}",
+                Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_kontaktUpdateFragment_to_kontaktListFragment)
+        }
+        builder.setNegativeButton("NO"){_, _ ->}
+        builder.setTitle("Slett ${args.currentKontakt.navn}")
+        builder.setMessage("Vil du slette ${args.currentKontakt.navn} fra kontakt listen?")
+        builder.create().show()
+    }
 }

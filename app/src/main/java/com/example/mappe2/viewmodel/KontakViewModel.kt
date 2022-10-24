@@ -38,4 +38,19 @@ class KontakViewModel(application: Application): AndroidViewModel(application) {
             repository.updateKontakt(kontakt)
         }
     }
+
+    fun deleteKontakt(kontakt: Kontakt){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteKontakt(kontakt)
+        }
+    }
+
+    /*
+    fun deleteAllKontakt(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllKontakt()
+        }
+    }
+
+     */
 }
