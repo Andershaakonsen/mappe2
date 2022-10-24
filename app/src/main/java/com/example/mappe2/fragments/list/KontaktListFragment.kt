@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mappe2.R
-import com.example.mappe2.data.KontakViewModel
+import com.example.mappe2.viewmodel.KontakViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 

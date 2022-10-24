@@ -11,4 +11,5 @@
     <string name="etNavn">Navn</string>
     <string name="edTelefonNr">Telefon nr.</string>
     <string name="btnLeggTil">Legg Til</string>
+    <string name="oppdater_btn">Oppdater</string>
 </resources>

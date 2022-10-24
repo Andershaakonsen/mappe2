@@ -4,9 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.ListFragment
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mappe2.R
 import com.example.mappe2.model.Kontakt
+import kotlinx.android.synthetic.main.custom_row.view.*
 
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
@@ -36,6 +39,12 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = kontaktList[position]
         holder.itemView.findViewById<TextView>(R.id.tvKontaktNavn).text = currentItem.navn
         holder.itemView.findViewById<TextView>(R.id.tvKontaktTelefon).text = currentItem.telefon
+
+        //Sends contact to update fragment
+        holder.itemView.rowLayout.setOnClickListener{
+            val action = KontaktListFragmentDirections.actionKontaktListFragmentToKontaktUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
     }
 
     fun setData(kontakt: List<Kontakt>){

@@ -8,19 +8,34 @@
     <fragment
         android:id="@+id/kontaktListFragment"
         android:name="com.example.mappe2.fragments.list.KontaktListFragment"
-        android:label="fragment_kontakt_list"
+        android:label="Kontakter"
         tools:layout="@layout/fragment_kontakt_list" >
         <action
             android:id="@+id/action_kontaktListFragment_to_kontaktAddFragment"
             app:destination="@id/kontaktAddFragment" />
+        <action
+            android:id="@+id/action_kontaktListFragment_to_kontaktUpdateFragment"
+            app:destination="@id/kontaktUpdateFragment" />
     </fragment>
     <fragment
         android:id="@+id/kontaktAddFragment"
         android:name="com.example.mappe2.fragments.add.KontaktAddFragment"
-        android:label="fragment_kontakt_add"
+        android:label="Legg Til"
         tools:layout="@layout/fragment_kontakt_add" >
         <action
             android:id="@+id/action_kontaktAddFragment_to_kontaktListFragment"
             app:destination="@id/kontaktListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kontaktUpdateFragment"
+        android:name="com.example.mappe2.fragments.update.KontaktUpdateFragment"
+        android:label="Oppdater"
+        tools:layout="@layout/fragment_kontakt_update" >
+        <action
+            android:id="@+id/action_kontaktUpdateFragment_to_kontaktListFragment"
+            app:destination="@id/kontaktListFragment" />
+        <argument
+            android:name="currentKontakt"
+            app:argType="com.example.mappe2.model.Kontakt" />
     </fragment>
 </navigation>
