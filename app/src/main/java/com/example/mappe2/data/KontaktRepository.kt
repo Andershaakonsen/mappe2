@@ -1,6 +1,7 @@
 package com.example.mappe2.data
 
 import androidx.lifecycle.LiveData
+import com.example.mappe2.model.Kontakt
 
 class KontaktRepository(private val kontaktDao: KontaktDao) {
 

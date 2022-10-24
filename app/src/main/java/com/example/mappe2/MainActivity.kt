@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(Hjem())
 
+        //Sette rettigheter til å sende smser her
+
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.hjem -> replaceFragment(Hjem())

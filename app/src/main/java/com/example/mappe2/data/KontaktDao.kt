@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.mappe2.model.Kontakt
 
 //Data Access Object will containt the methods used for accesing the database
 @Dao

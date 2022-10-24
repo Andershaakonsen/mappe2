@@ -1,4 +1,4 @@
-package com.example.mappe2.data
+package com.example.mappe2.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

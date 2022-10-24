@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.mappe2.model.Kontakt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -14,7 +15,7 @@ A ViewModel acts as a communication center between the Repository and the UI
 
 class KontakViewModel(application: Application): AndroidViewModel(application) {
 
-    private val readAllData: LiveData<List<Kontakt>>
+    val readAllData: LiveData<List<Kontakt>>
     private val repository: KontaktRepository
 
     init {

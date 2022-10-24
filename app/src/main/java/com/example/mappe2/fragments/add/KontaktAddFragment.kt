@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.mappe2.R
 import com.example.mappe2.data.KontakViewModel
-import com.example.mappe2.data.Kontakt
+import com.example.mappe2.model.Kontakt
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
