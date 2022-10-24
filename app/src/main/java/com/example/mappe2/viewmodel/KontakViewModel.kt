@@ -10,10 +10,6 @@ import com.example.mappe2.model.Kontakt
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-/*
-The Viewmodels role is to provide data to the UI and survive configuration changes.
-A ViewModel acts as a communication center between the Repository and the UI
- */
 
 class KontakViewModel(application: Application): AndroidViewModel(application) {
 
@@ -45,12 +41,5 @@ class KontakViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    /*
-    fun deleteAllKontakt(){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteAllKontakt()
-        }
-    }
 
-     */
 }
