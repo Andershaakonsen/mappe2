@@ -7,4 +7,8 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_contact_btn">legg til kontakt</string>
+    <string name="etNavn">Navn</string>
+    <string name="edTelefonNr">Telefon nr.</string>
+    <string name="btnLeggTil">Legg Til</string>
 </resources>

@@ -3,7 +3,12 @@ package com.example.mappe2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.mappe2.databinding.ActivityMainBinding
+import com.example.mappe2.fragments.Avtaler
+import com.example.mappe2.fragments.Hjem
+import com.example.mappe2.fragments.Kontakter
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
             }
+
     }
 
 

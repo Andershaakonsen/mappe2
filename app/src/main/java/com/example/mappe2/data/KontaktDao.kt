@@ -11,8 +11,7 @@ import androidx.room.Query
 interface KontaktDao {
 
     //Ignores if the user coming in is exaclty the same
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addKontakt(kontakt: Kontakt)
+    @Insert(onConflict = OnConflictStrategy.IGNORE) fun addKontakt(kontakt: Kontakt)
 
     @Query("SELECT * FROM kontakt_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Kontakt>>

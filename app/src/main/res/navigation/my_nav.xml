@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/my_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/kontaktListFragment">
 
+    <fragment
+        android:id="@+id/kontaktListFragment"
+        android:name="com.example.mappe2.fragments.list.KontaktListFragment"
+        android:label="fragment_kontakt_list"
+        tools:layout="@layout/fragment_kontakt_list" >
+        <action
+            android:id="@+id/action_kontaktListFragment_to_kontaktAddFragment"
+            app:destination="@id/kontaktAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kontaktAddFragment"
+        android:name="com.example.mappe2.fragments.add.KontaktAddFragment"
+        android:label="fragment_kontakt_add"
+        tools:layout="@layout/fragment_kontakt_add" >
+        <action
+            android:id="@+id/action_kontaktAddFragment_to_kontaktListFragment"
+            app:destination="@id/kontaktListFragment" />
+    </fragment>
 </navigation>

@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.3585" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4164828186697143" />
         <entry key="app/src/main/res/layout/fragment_avtaler.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_fullscreen.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_hjem.xml" value="0.3609375" />
+        <entry key="app/src/main/res/layout/fragment_kontakt_add.xml" value="0.3609375" />
+        <entry key="app/src/main/res/layout/fragment_kontakt_list.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_kontakter.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_vis_avtaler.xml" value="0.1796875" />
@@ -20,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3609375" />
+      </ProjectState>
+    </option>
   </component>
 </project>
