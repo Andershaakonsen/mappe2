@@ -8,7 +8,7 @@ import com.example.mappe2.model.Avtale
 import com.example.mappe2.model.Kontakt
 
 
-@Database(entities = arrayOf(Kontakt::class, Avtale::class), version = 2, exportSchema = false)
+@Database(entities = arrayOf(Kontakt::class, Avtale::class), version = 3, exportSchema = false)
 public abstract class AppDatabase: RoomDatabase() {
 
     abstract fun kontaktDao(): KontaktDao
@@ -21,23 +21,7 @@ public abstract class AppDatabase: RoomDatabase() {
 
 
         fun getDatabase(context: Context): AppDatabase {
-            /*
-            val tempInstance = INSTANCE
-            if(tempInstance != null){
-                return tempInstance
-            }
-            synchronized(this){
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    AppDatabase::class.java,
-                    "app_database"
-                ).build()
-                INSTANCE = instance
-                return instance
-            }*/
 
-            // if the INSTANCE is not null, then return it,
-            // if it is, then create the database
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,

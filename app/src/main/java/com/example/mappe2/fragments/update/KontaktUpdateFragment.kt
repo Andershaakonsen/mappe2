@@ -58,7 +58,7 @@ class KontaktUpdateFragment : Fragment() {
         val navn = etUpdateNavn.text.toString()
         val telefon = etUpdateTelefon.text.toString()
 
-        if(inputCheck(navn, telefon)){
+        if(!isInvalid(navn, telefon)){
             //Create Kontak Object
             val updatedKontakt = Kontakt(args.currentKontakt.id, navn, telefon)
             //Update Current Kontakt
@@ -70,9 +70,10 @@ class KontaktUpdateFragment : Fragment() {
         }
     }
 
-    private fun inputCheck(navn: String, telefon: String): Boolean{
-        return !(TextUtils.isEmpty(navn) && TextUtils.isEmpty(telefon))
+    private fun isInvalid(navn: String, telefon: String): Boolean{
+        return TextUtils.isEmpty(navn) || TextUtils.isEmpty(telefon)
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
        inflater.inflate(R.menu.delete_menu, menu)

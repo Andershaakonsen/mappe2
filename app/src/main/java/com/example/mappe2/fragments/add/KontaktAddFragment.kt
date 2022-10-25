@@ -49,7 +49,7 @@ class KontaktAddFragment : Fragment() {
         val telefon = view?.findViewById<EditText>(R.id.etTelefon)?.text.toString()
 
         //Creates User Object
-        if (inputCheck(navn, telefon)){
+        if (!isInvalid(navn, telefon)){
             val kontakt = Kontakt(0, navn, telefon)
             //Add Data to Database
             kontaktViewModel.addKontakt(kontakt)
@@ -62,8 +62,8 @@ class KontaktAddFragment : Fragment() {
 
 
     }
-    private fun inputCheck(navn: String, telefon: String): Boolean{
-        return !(TextUtils.isEmpty(navn) && TextUtils.isEmpty(telefon))
+    private fun isInvalid(navn: String, telefon: String): Boolean{
+        return TextUtils.isEmpty(navn) || TextUtils.isEmpty(telefon)
     }
 
 }

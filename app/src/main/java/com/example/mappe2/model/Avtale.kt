@@ -15,7 +15,8 @@ import java.sql.Date
 data class Avtale(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val klokkeslett: Date,
+    val dato: Date,
+    val klokkeslett: String,
     val sted: String,
     val melding: String,
     val navn: String): Parcelable
