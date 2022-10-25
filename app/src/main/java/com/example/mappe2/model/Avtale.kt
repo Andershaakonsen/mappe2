@@ -8,6 +8,7 @@ import androidx.room.TypeConverters
 import kotlinx.android.parcel.Parcelize
 import java.sql.Date
 
+//Parcelize to send object through safeArgs to update fragment
 @Parcelize
 @Entity(tableName = "avtale_table")
 @TypeConverters(DateConverter::class)

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/avtaler_nav"
+    app:startDestination="@id/avtaleListFragment">
+    <fragment
+        android:id="@+id/avtaleListFragment"
+        android:name="com.example.mappe2.fragments.list.AvtaleListFragment"
+        android:label="fragment_avtaler_list"
+        tools:layout="@layout/fragment_avtaler_list" >
+        <action
+            android:id="@+id/action_avtaleListFragment_to_avtaleAddFragment"
+            app:destination="@id/avtaleAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/avtaleAddFragment"
+        android:name="com.example.mappe2.fragments.add.AvtaleAddFragment"
+        android:label="fragment_avtale_add"
+        tools:layout="@layout/fragment_avtale_add" >
+        <action
+            android:id="@+id/action_avtaleAddFragment_to_avtaleListFragment"
+            app:destination="@id/avtaleListFragment" />
+    </fragment>
+</navigation>

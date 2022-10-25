@@ -5,6 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
+//Parcelize to send object through safeArgs to update fragment
 @Parcelize
 @Entity(tableName = "kontakt_table")
 data class Kontakt(

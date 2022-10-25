@@ -27,7 +27,7 @@ class KontaktListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_kontakt_list, container, false)
 
         // Recyclerview
-        val adapter = ListAdapter()
+        val adapter = KontaktListAdapter()
         val recyclerView = view.findViewById<RecyclerView>(R.id.rvKontaktListe)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())

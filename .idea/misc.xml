@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.4164828186697143" />
         <entry key="app/src/main/res/layout/custom_row.xml" value="0.5720621744791667" />
         <entry key="app/src/main/res/layout/fragment_avtaler.xml" value="0.3609375" />
+        <entry key="app/src/main/res/layout/fragment_avtaler_add.xml" value="0.3609375" />
+        <entry key="app/src/main/res/layout/fragment_avtaler_list.xml" value="0.2972222222222222" />
         <entry key="app/src/main/res/layout/fragment_fullscreen.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_hjem.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_kontakt_add.xml" value="0.3609375" />

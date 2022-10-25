@@ -12,4 +12,11 @@
     <string name="edTelefonNr">Telefon nr.</string>
     <string name="btnLeggTil">Legg Til</string>
     <string name="oppdater_btn">Oppdater</string>
+    <string name="legg_til_kontakt_btn">Legg til kontakt</string>
+    <string name="klokkeslett_avtale">Klokkeslett</string>
+    <string name="dato">Dato</string>
+    <string name="sted">Sted</string>
+    <string name="melding">Melding</string>
+    <string name="kontakt_sette_avtale_med">Kontakt å sette avtale med</string>
+    <string name="legg_til_avtale">Legg til avtale</string>
 </resources>

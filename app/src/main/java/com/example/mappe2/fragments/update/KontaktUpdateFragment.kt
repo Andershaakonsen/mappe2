@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.fragment_kontakt_update.*
 class KontaktUpdateFragment : Fragment() {
 
 
+    //Gets safeargs from RecyclerView Kontakt Object
     private val args by navArgs<KontaktUpdateFragmentArgs>()
     private lateinit var mKontakViewModel: KontakViewModel
 
@@ -52,6 +53,7 @@ class KontaktUpdateFragment : Fragment() {
         return view
     }
 
+
     private fun updateItem(){
         val navn = etUpdateNavn.text.toString()
         val telefon = etUpdateTelefon.text.toString()
@@ -83,6 +85,7 @@ class KontaktUpdateFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
+    //Displays popup if clicked on
     private fun deleteUser() {
        val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes"){ _, _ ->

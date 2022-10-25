@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.ListFragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mappe2.R
@@ -12,7 +11,7 @@ import com.example.mappe2.model.Kontakt
 import kotlinx.android.synthetic.main.custom_row.view.*
 
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class KontaktListAdapter: RecyclerView.Adapter<KontaktListAdapter.MyViewHolder>() {
 
     private var kontaktList = emptyList<Kontakt>()
 
