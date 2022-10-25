@@ -45,12 +45,5 @@ class KontakViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    /*
-    fun deleteAllKontakt(){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteAllKontakt()
-        }
-    }
 
-     */
 }

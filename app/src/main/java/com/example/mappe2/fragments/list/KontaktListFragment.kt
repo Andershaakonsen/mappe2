@@ -5,14 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mappe2.R
+import com.example.mappe2.model.Kontakt
 import com.example.mappe2.viewmodel.KontakViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.*
 
 
 class KontaktListFragment : Fragment() {
@@ -36,11 +40,17 @@ class KontaktListFragment : Fragment() {
         mKontaktViewModel = ViewModelProvider(this).get(KontakViewModel::class.java)
         mKontaktViewModel.readAllData.observe(viewLifecycleOwner, Observer { kontakt ->
             adapter.setData(kontakt)
+            val liste = kontakt.map { T -> T.navn }
+            Toast.makeText(requireContext(), "${liste}",Toast.LENGTH_LONG).show()
         })
 
+        //Navigation to addFragment
         view.findViewById<FloatingActionButton>(R.id.floatingActionButtonAdd).setOnClickListener{
             findNavController().navigate(R.id.action_kontaktListFragment_to_kontaktAddFragment)
         }
+
+
+
 
 
         return view

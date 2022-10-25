@@ -5,14 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.mappe2.R
+import com.example.mappe2.viewmodel.KontakViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fragment_avtaler_list.view.*
 
 class AvtaleListFragment : Fragment() {
 
 
+    private lateinit var mKontaktViewModel: KontakViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +27,9 @@ class AvtaleListFragment : Fragment() {
         view.findViewById<FloatingActionButton>(R.id.floatingBtnAddAvtale).setOnClickListener{
             findNavController().navigate(R.id.action_avtaleListFragment_to_avtaleAddFragment)
         }
+
+        //List of names
+        mKontaktViewModel = ViewModelProvider(this).get(KontakViewModel::class.java)
 
         return view
     }

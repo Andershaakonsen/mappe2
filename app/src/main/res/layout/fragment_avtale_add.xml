@@ -8,20 +8,6 @@
     tools:context=".fragments.add.AvtaleAddFragment">
 
     <EditText
-        android:id="@+id/etDato"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/dato"
-        android:inputType="date"
-        android:textColorHint="#757575"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
         android:id="@+id/etSted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,17 +18,15 @@
         android:minHeight="48dp"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDato" />
+        app:layout_constraintTop_toBottomOf="@+id/etTidspunkt" />
 
     <EditText
         android:id="@+id/etMelding"
-        android:layout_width="0dp"
+        android:layout_width="283dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="64dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/melding"
@@ -52,21 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="64dp"
-        android:contentDescription="@string/kontakt_sette_avtale_med"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSted" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Button
         android:id="@+id/btnAddAvtale"
@@ -78,5 +48,68 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etMelding" />
+
+    <TextView
+        android:id="@+id/tvNavn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSted" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/kontakt"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNavn"
+        tools:textColorHint="#757575" />
+
+    <TextView
+        android:id="@+id/tvDato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDatePicker" />
+
+    <Button
+        android:id="@+id/btnDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/velg_dato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTidspunkt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Tidspunkt"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDato"
+        tools:textColorHint="#757575" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

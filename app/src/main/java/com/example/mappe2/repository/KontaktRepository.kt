@@ -19,10 +19,6 @@ class KontaktRepository(private val kontaktDao: KontaktDao) {
     suspend fun deleteKontakt(kontakt: Kontakt){
         kontaktDao.deleteKontakt(kontakt)
     }
-    /*
-    suspend fun  deleteAllKontakt(){
-        kontaktDao.deleteAllKontakt()
-    }
 
-     */
+
 }

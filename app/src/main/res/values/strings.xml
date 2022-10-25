@@ -19,4 +19,8 @@
     <string name="melding">Melding</string>
     <string name="kontakt_sette_avtale_med">Kontakt å sette avtale med</string>
     <string name="legg_til_avtale">Legg til avtale</string>
+    <string name="venner_header">Venner:</string>
+    <string name="textview">TextView</string>
+    <string name="kontakt">Kontakt</string>
+    <string name="velg_dato">Velg Dato</string>
 </resources>
