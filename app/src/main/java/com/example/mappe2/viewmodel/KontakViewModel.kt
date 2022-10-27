@@ -20,10 +20,13 @@ class KontakViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<Kontakt>>
     private val repository: KontaktRepository
 
+    val navnListe: ArrayList<String>
+
     init {
         val kontaktDao = AppDatabase.getDatabase(application).kontaktDao()
         repository = KontaktRepository(kontaktDao)
         readAllData = repository.readAllData
+        navnListe = ArrayList<String>()
     }
 
     fun addKontakt(kontakt: Kontakt){
@@ -44,6 +47,14 @@ class KontakViewModel(application: Application): AndroidViewModel(application) {
             repository.deleteKontakt(kontakt)
         }
     }
+
+    /*
+    suspend fun kontaktExists(kontakt: Kontakt): List<Kontakt> {
+       return repository.kontaktExists(kontakt)
+    }
+
+
+     */
 
 
 }

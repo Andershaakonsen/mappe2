@@ -17,6 +17,12 @@ interface KontaktDao {
     @Delete
     fun deleteKontakt(kontakt: Kontakt)
 
+    // @Query("SELECT EXISTS(SELECT 1 FROM kontakt_table WHERE navn = :name)")
+    /*
+    @Query("SELECT * FROM kontakt_table")
+    suspend fun kontaktExists(): List<Kontakt>
+
+     */
 
     @Query("SELECT * FROM kontakt_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Kontakt>>

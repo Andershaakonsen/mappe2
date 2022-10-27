@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/layout/custom_row.xml" value="0.5720621744791667" />
         <entry key="app/src/main/res/layout/custom_row_avtale.xml" value="0.557361348470052" />
         <entry key="app/src/main/res/layout/fragment_avtale_add.xml" value="0.5622489959839357" />
+        <entry key="app/src/main/res/layout/fragment_avtale_update.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_avtaler.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_avtaler_add.xml" value="0.3609375" />
         <entry key="app/src/main/res/layout/fragment_avtaler_list.xml" value="0.2972222222222222" />

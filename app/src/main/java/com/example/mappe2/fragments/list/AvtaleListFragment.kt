@@ -5,17 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mappe2.R
+import com.example.mappe2.model.Avtale
 import com.example.mappe2.viewmodel.AvtaleViewModel
 import com.example.mappe2.viewmodel.KontakViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.SimpleDateFormat
+import java.util.*
 
-class AvtaleListFragment : Fragment() {
+class AvtaleListFragment() : Fragment() {
 
 
     private lateinit var mKontaktViewModel: KontakViewModel
@@ -51,6 +55,7 @@ class AvtaleListFragment : Fragment() {
 
         return view
     }
+
 
 
 }

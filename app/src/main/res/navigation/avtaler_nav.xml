@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_avtaleListFragment_to_avtaleAddFragment"
             app:destination="@id/avtaleAddFragment" />
+        <action
+            android:id="@+id/action_avtaleListFragment_to_avtaleUpdateFragment"
+            app:destination="@id/avtaleUpdateFragment" />
     </fragment>
     <fragment
         android:id="@+id/avtaleAddFragment"
@@ -21,5 +24,17 @@
         <action
             android:id="@+id/action_avtaleAddFragment_to_avtaleListFragment"
             app:destination="@id/avtaleListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/avtaleUpdateFragment"
+        android:name="com.example.mappe2.fragments.update.AvtaleUpdateFragment"
+        android:label="fragment_avtale_update"
+        tools:layout="@layout/fragment_avtale_update" >
+        <action
+            android:id="@+id/action_avtaleUpdateFragment_to_avtaleListFragment"
+            app:destination="@id/avtaleListFragment" />
+        <argument
+            android:name="currentAvtale"
+            app:argType="com.example.mappe2.model.Avtale" />
     </fragment>
 </navigation>

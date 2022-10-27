@@ -5,10 +5,10 @@
     android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.add.AvtaleAddFragment">
+    tools:context=".fragments.update.AvtaleUpdateFragment">
 
     <EditText
-        android:id="@+id/etSted"
+        android:id="@+id/etUpdateSted"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -20,10 +20,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTidspunkt" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateTidspunkt"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/etMelding"
+        android:id="@+id/etUpdateMelding"
         android:layout_width="283dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -36,21 +37,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etKontaktNavn" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateKontaktNavn"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/btnAddAvtale"
+        android:id="@+id/btnUpdateAvtale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="@string/legg_til_avtale"
+        android:text="@string/oppdater_avtale"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etMelding" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateMelding" />
 
     <TextView
-        android:id="@+id/tvNavnListe"
+        android:id="@+id/tvUpdateNavnListe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -59,10 +61,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSted" />
+        app:layout_constraintTop_toBottomOf="@+id/etUpdateSted" />
 
     <EditText
-        android:id="@+id/etKontaktNavn"
+        android:id="@+id/etUpdateKontaktNavn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -73,21 +75,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNavnListe"
-        tools:textColorHint="#757575" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateNavnListe"
+        tools:textColorHint="#757575"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/tvDisplayDato"
+        android:id="@+id/tvUpdateDisplayDato"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDatePicker" />
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateDatePicker" />
 
     <Button
-        android:id="@+id/btnDatePicker"
+        android:id="@+id/btnUpdateDatePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -98,7 +101,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etTidspunkt"
+        android:id="@+id/etUpdateTidspunkt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -109,8 +112,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDisplayDato"
-        tools:textColorHint="#757575" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateDisplayDato"
+        tools:textColorHint="#757575"
+        android:importantForAutofill="no" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonBack"
@@ -120,7 +124,7 @@
         android:layout_marginBottom="24dp"
         android:backgroundTint="#009688"
         android:clickable="true"
-        android:contentDescription="@string/go_back_to_avtale_list"
+        android:contentDescription="@string/back_to_avtale_list"
         android:focusable="true"
         android:src="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -23,4 +23,9 @@
     <string name="textview">TextView</string>
     <string name="kontakt">Kontakt</string>
     <string name="velg_dato">Velg Dato</string>
+    <string name="tidspunkt">Tidspunkt</string>
+    <string name="go_back_to_avtale_list">Go back to avtale list</string>
+    <string name="oppdater_dato">Oppdater Dato</string>
+    <string name="oppdater_avtale">oppdater avtale</string>
+    <string name="back_to_avtale_list">Back to Avtale List</string>
 </resources>

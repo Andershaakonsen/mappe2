@@ -15,12 +15,13 @@ import com.example.mappe2.R
 import com.example.mappe2.viewmodel.KontakViewModel
 import com.example.mappe2.model.Kontakt
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 
 
 class KontaktAddFragment : Fragment() {
 
     private lateinit var kontaktViewModel: KontakViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,28 +33,35 @@ class KontaktAddFragment : Fragment() {
             findNavController().navigate(R.id.action_kontaktAddFragment_to_kontaktListFragment)
         }
 
+
         kontaktViewModel = ViewModelProvider(this).get(KontakViewModel::class.java)
 
+        val navnListe = kontaktViewModel.navnListe
+
+        val telefonListe = ArrayList<String>()
+
         view.findViewById<Button>(R.id.btnAddContact).setOnClickListener {
-            insertDataToDatabase()
+            insertDataToDatabase(navnListe, telefonListe)
         }
 
 
         return view
     }
 
-    private fun insertDataToDatabase() {
+    private fun insertDataToDatabase(navnListe: ArrayList<String>, telefonListe: ArrayList<String>) {
 
 
         val navn = view?.findViewById<EditText>(R.id.etNavn)?.text.toString()
         val telefon = view?.findViewById<EditText>(R.id.etTelefon)?.text.toString()
 
         //Creates User Object
-        if (!isInvalid(navn, telefon)){
+        if (!isInvalid(navn, telefon) && !isDuplicate(navn, telefon, navnListe, telefonListe)){
             val kontakt = Kontakt(0, navn, telefon)
             //Add Data to Database
             kontaktViewModel.addKontakt(kontakt)
-            Toast.makeText(requireContext(), "Kontakt lagt til!, navn: $navn, tlf: $telefon" , Toast.LENGTH_LONG).show()
+            navnListe.add(kontakt.navn.toString())
+            telefonListe.add(kontakt.telefon.toString())
+            Toast.makeText(requireContext(), "Navnliste: ${navnListe}" , Toast.LENGTH_LONG).show()
             //Navigate back
             findNavController().navigate(R.id.action_kontaktAddFragment_to_kontaktListFragment)
         }else{
@@ -64,6 +72,14 @@ class KontaktAddFragment : Fragment() {
     }
     private fun isInvalid(navn: String, telefon: String): Boolean{
         return TextUtils.isEmpty(navn) || TextUtils.isEmpty(telefon)
+    }
+
+    private fun isDuplicate(navn: String, telefon: String, kontaktListe: ArrayList<String>, telefonListe: ArrayList<String>): Boolean{
+        if (kontaktListe.contains(navn)){
+            return true
+            Toast.makeText(requireContext(),"Navnliste: ${kontaktListe.toString()}", Toast.LENGTH_LONG).show()
+        }
+        return false
     }
 
 }
