@@ -1,12 +1,11 @@
 package com.example.mappe2.fragments.update
 
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -38,7 +37,7 @@ class AvtaleUpdateFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_avtale_update, container, false)
-
+        mAvtaleViewModel = ViewModelProvider(this).get(AvtaleViewModel::class.java)
 
         val tvUpdateDisplayDato = view.findViewById<TextView>(R.id.tvUpdateDisplayDato)
         val dato = args.currentAvtale.dato
@@ -78,7 +77,8 @@ class AvtaleUpdateFragment : Fragment() {
         })
 
 
-
+        //Add delete
+        setHasOptionsMenu(true)
 
         //Sets Text from Arguments
         view.findViewById<EditText>(R.id.etUpdateTidspunkt).setText(args.currentAvtale.klokkeslett)
@@ -125,6 +125,34 @@ class AvtaleUpdateFragment : Fragment() {
                 TextUtils.isEmpty(sted) ||
                 TextUtils.isEmpty(navn) ||
                 !navnListe.contains(navn)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.delete_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+       if(item.itemId == R.id.menu_delete){
+           deleteAvtale()
+       }
+        return super.onOptionsItemSelected(item)
+
+    }
+
+    private fun deleteAvtale() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Yes"){ _, _ ->
+            mAvtaleViewModel.deleteAvtale(args.currentAvtale)
+            Toast.makeText(
+                requireContext(),
+                "Avtale fjernet: ${args.currentAvtale.navn}, ${args.currentAvtale.sted}",
+                Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_avtaleUpdateFragment_to_avtaleListFragment)
+        }
+        builder.setNegativeButton("NO"){_, _ ->}
+        builder.setTitle("Slett avtale med ${args.currentAvtale.navn}, sted: ${args.currentAvtale.sted}")
+        builder.setMessage("Vil du slette avtale med ${args.currentAvtale.navn} på sted: ${args.currentAvtale.sted}")
+        builder.create().show()
     }
 
 }
