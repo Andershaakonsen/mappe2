@@ -1,11 +1,13 @@
 <resources>
+    <string name="standard_melding">Husk avtalen i dag!</string>
+    <string name="utsendelse_tidspunkt">11:30</string>
+    
     <string name="app_name">mappe2</string>
     <string name="btn_showContacts">VIS KONTAKTER</string>
     <string name="btn_showAppointments">VIS AVTALER</string>
     <string name="tv_Appointments">Dagens Avtaler</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_contact_btn">legg til kontakt</string>
     <string name="etNavn">Navn</string>

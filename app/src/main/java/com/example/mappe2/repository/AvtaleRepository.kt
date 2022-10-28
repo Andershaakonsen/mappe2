@@ -7,6 +7,7 @@ import com.example.mappe2.model.Avtale
 class AvtaleRepository(private val avtaleDao: AvtaleDao) {
 
     val readAllData: LiveData<List<Avtale>> = avtaleDao.readAllData()
+    //val readAllDataToday: List<Avtale> = avtaleDao.readAllDataToday()
 
     suspend fun addAvtale(avtale: Avtale){
         avtaleDao.addAvtale(avtale)
@@ -19,5 +20,7 @@ class AvtaleRepository(private val avtaleDao: AvtaleDao) {
     suspend fun deleteAvtale(avtale: Avtale){
         avtaleDao.deleteAvtale(avtale)
     }
+
+
 }
 

@@ -18,4 +18,10 @@ interface AvtaleDao {
 
     @Query("SELECT * FROM avtale_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Avtale>>
+
+    @Query("SELECT * FROM avtale_table")
+    fun readAllDataToday(): List<Avtale>
+
+    @Query("SELECT telefon FROM kontakt_table WHERE navn = :navn")
+    fun getPhoneNumber(navn: String): String
 }

@@ -18,6 +18,7 @@ class AvtaleViewModel(application: Application): AndroidViewModel(application) {
         val avtaleDao = AppDatabase.getDatabase(application).avtaleDao()
         repository = AvtaleRepository(avtaleDao)
         readAllData = repository.readAllData
+       // val readAllDataToday: List<Avtale> = repository.readAllDataToday
     }
 
     fun addAvtale(avtale: Avtale){

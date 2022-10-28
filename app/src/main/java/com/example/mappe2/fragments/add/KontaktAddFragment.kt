@@ -34,6 +34,7 @@ class KontaktAddFragment : Fragment() {
         }
 
 
+
         kontaktViewModel = ViewModelProvider(this).get(KontakViewModel::class.java)
 
         val navnListe = kontaktViewModel.navnListe
